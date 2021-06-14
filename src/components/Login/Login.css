@@ -1,0 +1,40 @@
+.content-wrapper{
+    height: 80%;
+    width: 400px;
+    margin: auto;
+    margin-top: 10%;
+}
+
+.content-center{
+    width: 50%;
+    margin: auto;
+}
+
+.input{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 76%;
+    margin: auto;
+}
+
+.title{
+    padding-top: 30px;
+    margin: auto;
+    font-size: 30px;
+    text-align: center;
+}
+
+.content-center{
+    width: 100%;
+    margin: auto;
+}
+
+.button{
+    width: 25%;
+    margin: auto;
+    padding: 20px 0;
+}
+
+.alert{
+    display: none;
+}

@@ -1,0 +1,26 @@
+.content-wrapper{
+    height: 80%;
+    width: 400px;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.input{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 76%;
+    margin: auto;
+}
+
+.button2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 35%;
+    margin: auto;
+}
+
+.title{
+    padding-top: 30px;
+    margin: auto;
+    font-size: 30px;
+}

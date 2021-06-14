@@ -1,18 +1,42 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
+import Login from './components/Login';
+import Register from './components/Register';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import Authenticated from './components/Authenticated';
 
-function App() {
+const App = () => {
+  const [token, setToken] = useState(false);
+
+  const checkToken = () => {
+    if(!token){
+      return <Login setToken={setToken} />
+    }else{
+      return <Authenticated />
+    }
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <p>
-          Happy coding!!!
-        </p>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path= '/'>
+          <Register />
+        </Route>
+        <Route path='/login'>
+          <Login setToken={setToken}/>
+        </Route>
+        <Route path='/authenticated'>
+          {checkToken()}
+        </Route>
+        <Route path='/register'>
+          <Register />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
